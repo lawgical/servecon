@@ -1,20 +1,20 @@
 @charset 'UTF-8';
 
-@font-face{font-family:'FontAwesome';src:url('font/fontawesome-webfont.eot?v=4.0.1');src:url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'),url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
+@font-face{font-family:'Open Sans';src:url('http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,800');src:url('font/Open Sans-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('font/Open Sans-webfont.woff?v=4.0.1') format('woff'),url('font/Open Sans-webfont.ttf?v=4.0.1') format('truetype'),url('font/Open Sans-webfont.svg?v=4.0.1#Open Sansregular') format('svg');font-weight:normal;font-style:normal}
 
 /*
-	Helios 1.5 by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Helios 1.5 by HTML5 UP
+  html5up.net | @n33co
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
 
-	body.paused *
-	{
-		-moz-transition: none;
+  body.paused *
+  {
+  	-moz-transition: none;
 		-webkit-transition: none;
 		-o-transition: none;
 		-ms-transition: none;
@@ -25,7 +25,7 @@
 	{
 		background: #f0f4f4;
 		color: #5b5b5b;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Open Sans', sans-serif;
 		font-weight: 300;
 	}
 
@@ -37,7 +37,7 @@
 
 	h1,h2,h3,h4,h5,h6
 	{
-		font-weight: 400;
+		font-weight: 300;
 		color: #483949;
 		line-height: 1.25em;
 	}
@@ -51,7 +51,7 @@
 		
 		h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong
 		{
-			font-weight: 600;
+			font-weight: 400;
 		}
 
 	h2
@@ -576,7 +576,7 @@
 
 /*********************************************************************************/
 /* Icons                                                                         */
-/* Powered by Font Awesome by Dave Gandy | http://fontawesome.io                 */
+/* Powered by Font Awesome by Dave Gandy | http://Open Sans.io                 */
 /* Licensed under the SIL OFL 1.1 (font), MIT (CSS)                              */
 /*********************************************************************************/
 
@@ -622,7 +622,7 @@
 		.fa:before
 		{
 			display:inline-block;
-			font-family: FontAwesome;
+			font-family: 'Open Sans', sans-serif;
 			font-size: 1.25em;
 			text-decoration: none;
 			font-style: normal;
@@ -1054,7 +1054,7 @@
 	#header
 	{
 		position: relative;
-		background-image: url('../images/header.jpg');
+		background-image: url('https://s3.amazonaws.com/lawgical/assets/data/2201/original.jpg');
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -1107,6 +1107,10 @@
 			line-height: 1em;
 		}
 
+		#header h1 strong {
+			color: #fff;
+		}
+
 			.homepage #header h1
 			{
 				font-size: 4em;
@@ -1122,18 +1126,15 @@
 			font-size: 1.25em;
 			margin: 0;
 		}
-		
-		#header .button
-		{
-			border-radius: 100%;
-			width: 4.5em;
-			height: 4.5em;
-			line-height: 4.5em;
-			text-align: center;
-			font-size: 1.25em;
-			padding: 0;
+
+		#header .byline strong {
+			color: #fff;
 		}
 		
+		#header p {
+			text-align: center;
+		}
+
 		#header header
 		{
 			display: inline-block;
@@ -1318,6 +1319,13 @@
 		padding: 4.5em 0 4.5em 0;
 	}
 
+	#banner p{
+		text-align: center;
+		max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 /*********************************************************************************/
 /* Content                                                                       */
 /*********************************************************************************/
@@ -1408,6 +1416,11 @@
 			color: #fff;
 		}
 
+		#footer p strong {
+			color: #fff;
+			font-weight: bolder;
+		}
+
 		#footer .contact
 		{
 			text-align: center;
@@ -1438,131 +1451,39 @@
 				}
 
 /*********************************************************************************/
-/* Carousel                                                                      */
+/* speakers                                                                      */
 /*********************************************************************************/
 
-	.carousel
+	#speakers
 	{
-		position: relative;
-		overflow: hidden;
-		padding: 2em 0 2em 0;
+		padding: 2em 0em 4em 0em;
+		margin-left: auto;
+		margin-right: auto;
 	}
-
-		.carousel .forward,
-		.carousel .backward
-		{
-			position: absolute;
-			top: 50%;
-			width: 6em;
-			height: 12em;
-			margin-top: -6em;
-			cursor: pointer;
-		}
-		
-		.carousel .forward
-		{
-			right: 0;
-		}
-		
-		.carousel .backward
-		{
-			left: 0;
-		}
-
-			.carousel .forward:before,
-			.carousel .backward:before
-			{
-				content: '';
-				display: block;
-				width: 6em;
-				height: 6em;
-				border-radius: 100%;
-				background-color: rgba(72,57,73, 0.5);				
-				position: absolute;
-				top: 50%;
-				margin-top: -3em;
-				-moz-transition: background-color 0.35s ease-in-out;
-				-webkit-transition: background-color 0.35s ease-in-out;
-				-o-transition: background-color 0.35s ease-in-out;
-				-ms-transition: background-color 0.35s ease-in-out;
-				transition: background-color 0.35s ease-in-out;
-				-webkit-backface-visibility: hidden;
-			}
-
-			.carousel .forward:after,
-			.carousel .backward:after
-			{
-				content: '';
-				width: 3em;
-				height: 3em;
-				position: absolute;
-				top: 50%;
-				margin: -1.5em 0 0 0;
-				background: url('images/arrow.svg') no-repeat center center;
-			}
-
-			.carousel .forward:after
-			{
-				right: -0.25em;
-			}
-
-			.carousel .backward:after
-			{
-				left: -0.25em;
-				-moz-transform: scaleX(-1);
-				-webkit-transform: scaleX(-1);
-				-o-transform: scaleX(-1);
-				-ms-transform: scaleX(-1);
-				transform: scaleX(-1);
-    		}
-			
-			.carousel .forward:before
-			{
-				right: -3em;
-			}
-			
-			.carousel .backward:before
-			{
-				left: -3em;
-			}
-
-			.carousel .forward:hover:before,
-			.carousel .backward:hover:before
-			{
-				background-color: rgba(239,131,118, 0.75);
-			}
-
-		.carousel .reel
-		{
-			white-space: nowrap;
-			position: relative;
-			-webkit-overflow-scrolling: touch;
-			padding: 0 2em 0 2em;
-		}
 	
-		.carousel article
+	#speakers .profiles{
+		max-width: 1000px;
+		display: block;
+		margin-left: auto;
+		margin-right:auto;
+	}
+		#speakers article
 		{
 			display: inline-block;
-			width: 18em;
+			width: 11em;
 			background: #fff;
 			text-align: center;
-			padding: 0 1em 3em 1em;
-			margin: 0 2em 0 0;
+			padding: 1em 0.5em 2em 0.5em;
+			margin: 2em 0.25em 0em 0;
 			white-space: normal;
-			opacity: 1.0;
-			-moz-transition: opacity 0.75s ease-in-out;			
-			-webkit-transition: opacity 0.75s ease-in-out;			
-			-o-transition: opacity 0.75s ease-in-out;			
-			-ms-transition: opacity 0.75s ease-in-out;			
-			transition: opacity 0.75s ease-in-out;			
+			opacity: 1.0;		
 		}
 		
-			.carousel article.loading
-			{
-				opacity: 0;
-			}
+		#speakers h2 {
+			text-align: center;
+		}
 		
-			.carousel article .image
+			#speakers article .image
 			{
 				position: relative;
 				left: -1em;
@@ -1572,7 +1493,206 @@
 				margin-bottom: 3em;
 			}
 		
-			.carousel article p
+			#speakers article p
 			{
 				text-align: center;
+				font-size: 0.85em;
+
 			}
+
+			#speakers .byline {
+				text-align: center;
+				margin-top: 4em;
+			}
+
+			#speakers p {
+				text-align: center;
+			}
+
+			#speakers footer {
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+
+/*********************************************************************************/
+/* Schedule                                                                     */
+/*********************************************************************************/
+	#schedule h2 {
+		text-align: center;
+	}
+
+	#schedule h3 {
+		padding-left: 1em;
+	}
+
+	#schedule table {
+			width: 100%;
+			padding-bottom: 2em;
+		}
+
+		th {
+			font-weight: strong;
+			height: 3em;
+			background-color: #fff;
+			border-radius: 1px;
+			border-color: #A0A0A0;
+		}
+
+		td {
+			padding-left: 1em;
+			height: 2em;
+		}
+
+		tr:nth-child(even) {
+    background-color: #f0f4f4;
+}
+
+		tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/*********************************************************************************/
+/* Workshops                                                                      */
+/*********************************************************************************/
+
+.cols {
+  width: 100%;
+	padding-left: 2em;
+}
+
+.col_left{
+	width: 45%;
+  display: inline-block;
+	float-left;
+	margin-left: 1em;
+  margin-right: 2em;
+}
+
+.col_right {
+	width: 45%;
+  display: inline-block;
+	float-right;
+	margin-left: 0em;
+}
+
+/*********************************************************************************/
+/* Sponsors                                                                     */
+/*********************************************************************************/
+
+.sponsors {
+	background: #f0f4f4;
+}
+
+.sponsors h4 {
+	text-align: center;
+  	padding-top: 3em;
+  	padding-bottom: 3em;
+}
+
+.sponsors ul {
+	padding-bottom: 3em;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sponsors li {
+	display: inline-block;
+	padding: 0em 1em 2em 2em;
+}
+
+.sponsors img {
+	display: inline-block;
+}
+
+
+
+/*********************************************************************************/
+/* Earlybird Registration                                                                    */
+/*********************************************************************************/
+
+.earlybird {
+	text-align: center;
+	padding: 3em 0em 3em 0em;
+	background-color: #fff;
+}
+
+/*********************************************************************************/
+/* Register Banner                                                                     */
+/*********************************************************************************/
+
+.register_banner {
+	background-image: url('https://s3.amazonaws.com/lawgical/assets/data/2207/original.jpg');
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+	text-align: center;
+	padding: 2em 0em 2em 0em;
+}
+
+.register_banner h2 {
+	color: #fff;
+}
+
+.register_banner .byline {
+	color: #fff;
+}
+
+.register_banner .byline strong {
+	color: #fff;
+}
+
+.register_banner .byline {
+	font-color: #fff;
+}
+
+
+/*********************************************************************************/
+/* Email Signup                                                                    */
+/*********************************************************************************/
+
+#mc_embed_signup {
+	background: #fff;
+	font: 14px Helvetica, Arial, sans-serif;
+	width: 500px;
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#mc_embed_signup input.email {
+	display: inline-block;
+	margin-right: 0em;
+	padding-right: 0em;
+	padding-bottom: 0em;
+}
+
+#mc_embed_signup input.button {
+	position: relative;
+	display: inline-block;
+	background: #df7366;
+	color: #fff;
+	text-align: center;
+	border-radius: 0.5em;
+	text-decoration: none;
+	padding: 0.65em 3em 2.5em 3em;
+	border: 0;
+	cursor: pointer;
+	outline: 0;
+	margin-left: 0em;
+	float: right;
+}
+
+/*********************************************************************************/
+/* Contact Form                                                                 */
+/*********************************************************************************/
+
+#contactform {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	max-width: 700px;
+}
