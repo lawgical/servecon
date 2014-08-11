@@ -588,6 +588,16 @@
 /* Wrapper                                                                       */
 /*********************************************************************************/
 
+.fixed_width {
+	max-width: 42em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.row_padded {
+	padding: 2em;
+}
+
 	.wrapper
 	{
 		background: #fff;
@@ -623,12 +633,15 @@
 
 	.header_logo {
 		display: block;
-		width: 140%;
-		height: 140%;
-		margin: 0 0 1.5em -20%;
 		/*fill-rule:	evenodd;
 		clip-rule:	evenodd;*/
 		fill:	#FFFFFF;
+	}
+
+	.homepage .header_logo {
+		width: 140%;
+		height: 140%;
+		margin: 0 0 1.5em -20%;
 	}
 
 		.homepage #header
@@ -879,15 +892,13 @@
 /* Banner                                                                        */
 /*********************************************************************************/
 
-	#banner
+	#banner, #register
 	{
 		background: #fff;
-		text-align: center;
 		padding: 4.5em 0 4.5em 0;
 	}
 
-	#banner p{
-		text-align: center;
+	#banner p, #register p {
 		max-width: 900px;
 		margin-left: auto;
 		margin-right: auto;
@@ -1128,16 +1139,6 @@
 /* Sponsors                                                                     */
 /*********************************************************************************/
 
-.sponsors {
-	background: #f0f4f4;
-}
-
-.sponsors h4 {
-	text-align: center;
-  	padding-top: 3em;
-  	padding-bottom: 3em;
-}
-
 .sponsors ul {
 	max-width: 1000px;
 	margin-left: auto;
@@ -1149,9 +1150,6 @@
 	padding: 0em 1em 2em 2em;
 }
 
-.sponsors img {
-	display: inline-block;
-}
 
 
 
