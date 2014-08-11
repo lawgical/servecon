@@ -21,7 +21,7 @@
 
 	body
 	{
-		background: #f0f4f4;
+		background: #e0e4e4;
 		color: #5b5b5b;
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 300;
@@ -30,14 +30,15 @@
 	body,input,textarea,select
 	{
 		font-size: 15pt;
-		line-height: 1.85em;
+		line-height: 1.57;
 	}
 
 	h1,h2,h3,h4,h5,h6
 	{
+		margin-bottom: 0.6em;
 		font-weight: 400;
 		color: #483949;
-		line-height: 1.25em;
+		line-height: 1.2em;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
@@ -70,10 +71,7 @@
 
 	.byline
 	{
-		display: block;
 		font-size: 1.5em;
-		margin-top: 1em;
-		line-height: 1.5em;
 	}
 
 	strong, b
@@ -131,9 +129,16 @@
 		margin-bottom: 1em;
 	}
 
-	p
-	{
-		text-align: justify;
+	.text_white {
+		color: #fff;
+	}
+
+	.text_center {
+		text-align: center;
+	}
+
+	.text_right {
+		text-align: right;
 	}
 
 	br.clear
@@ -145,11 +150,6 @@
 	{
 		margin: 0 0 1em 0;
 	}
-
-		header .byline
-		{
-			margin-bottom: 2em;
-		}
 
 	footer
 	{
@@ -189,6 +189,18 @@
 		hr:after
 		{
 			right: -1px;
+		}
+
+		.break_small {
+			margin-bottom: 1em;
+		}
+
+		.break_medium {
+			margin-bottom: 2.5em;
+		}
+
+		.break_large {
+			margin-bottom: 6em;
 		}
 
 	.timestamp
@@ -599,7 +611,7 @@
 	#header
 	{
 		position: relative;
-		background-image: url('https://s3.amazonaws.com/lawgical/assets/data/2201/original.jpg');
+		background-image: url('../images/header.jpg');
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -607,6 +619,16 @@
 		text-align: center;
 		padding: 2.5em 0 2em 0;
 		cursor: default;
+	}
+
+	.header_logo {
+		display: block;
+		width: 140%;
+		height: 140%;
+		margin: 0 0 1.5em -20%;
+		/*fill-rule:	evenodd;
+		clip-rule:	evenodd;*/
+		fill:	#FFFFFF;
 	}
 
 		.homepage #header
@@ -1002,63 +1024,39 @@
 	#speakers
 	{
 		padding: 2em 0em 4em 0em;
+	}
+
+	#speakers .profiles{
+		max-width: 63%;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	#speakers .profiles{
-		max-width: 1000px;
-		display: block;
-		margin-left: auto;
-		margin-right:auto;
-	}
 		#speakers article
 		{
-			display: inline-block;
-			width: 11em;
+			float: left;
+			width: 23.05%;
 			background: #fff;
 			text-align: center;
-			padding: 1em 0.5em 2em 0.5em;
-			margin: 2em 0.25em 0em 0;
-			white-space: normal;
-			opacity: 1.0;
+			padding-bottom: 1em;
+			margin: 2em 2.6% 0 0;
+			font-size: 0.85em;
 		}
 
-		#speakers h2 {
-			text-align: center;
+		#speakers article img {
+			width: 100%;
+			height: auto;
+			margin-bottom: 0.5em;
 		}
 
-			#speakers article .image
-			{
-				position: relative;
-				left: -1em;
-				top: 0;
-				width: auto;
-				margin-right: -2em;
-				margin-bottom: 3em;
-			}
+		#speakers article:nth-of-type(4n+1) {
+			clear: left;
+		}
 
-			#speakers article p
-			{
-				text-align: center;
-				font-size: 0.85em;
-
-			}
-
-			#speakers .byline {
-				text-align: center;
-				margin-top: 4em;
-			}
-
-			#speakers p {
-				text-align: center;
-			}
-
-			#speakers footer {
-				margin-left: auto;
-				margin-right: auto;
-				text-align: center;
-			}
+		#speakers article:nth-of-type(4n) {
+			margin-right: 0;
+			clear: right;
+		}
 
 /*********************************************************************************/
 /* Schedule                                                                     */
@@ -1102,22 +1100,27 @@
 /*********************************************************************************/
 
 .cols {
-  width: 100%;
-	padding-left: 2em;
+	clear: both;
+}
+
+.cols:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
 
 .col_left{
-	width: 45%;
-  display: inline-block;
-	float-left;
-	margin-left: 1em;
-  margin-right: 2em;
+	width: 48%;
+	float: left;
+  margin-right: 4%;
 }
 
 .col_right {
-	width: 45%;
-  display: inline-block;
-	float-right;
+	width: 48%;
+	float: left;
 	margin-left: 0em;
 }
 
@@ -1136,7 +1139,6 @@
 }
 
 .sponsors ul {
-	padding-bottom: 3em;
 	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
@@ -1198,35 +1200,33 @@
 /*********************************************************************************/
 
 #mc_embed_signup {
-	background: #fff;
-	font: 14px Helvetica, Arial, sans-serif;
-	width: 500px;
+	max-width: 28em;
 	display: block;
-	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 #mc_embed_signup input.email {
-	display: inline-block;
-	margin-right: 0em;
-	padding-right: 0em;
-	padding-bottom: 0em;
+	float: left;
+	width: 68%;
+	margin-right: 4%;
+	padding: 0.6em;
+	border-radius: 0.3em;
+	border: 1px solid #ccc;
 }
 
 #mc_embed_signup input.button {
-	position: relative;
-	display: inline-block;
+	float: left;
+	width: 28%;
 	background: #df7366;
 	color: #fff;
 	text-align: center;
-	border-radius: 0.5em;
+	border-radius: 0.3em;
 	text-decoration: none;
-	padding: 0.65em 3em 2.5em 3em;
-	border: 0;
+	padding: 0.6em;
+	border: 1px solid #df7366;
 	cursor: pointer;
 	outline: 0;
-	margin-left: 0em;
 	float: right;
 }
 
