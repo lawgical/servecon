@@ -1043,15 +1043,17 @@
 		margin-right: auto;
 	}
 
-		#speakers article
-		{
+		#speakers article {
 			float: left;
-			width: 23.05%;
-			background: #fff;
-			text-align: center;
+			width: 22.75%;
+			text-align: left;
 			padding-bottom: 1em;
-			margin: 2em 2.6% 0 0;
+			margin: 2em 3% 0 0;
 			font-size: 0.85em;
+		}
+
+		#speakers article h3 {
+			margin-bottom: 0.15em;
 		}
 
 		#speakers article img {
