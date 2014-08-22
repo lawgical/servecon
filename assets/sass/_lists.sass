@@ -1,0 +1,43 @@
+ul, ol
+  margin: 0 0 $app-margin-small 1em
+  padding: 0
+
+ol
+  padding-left: 2.4em
+
+li
+  margin-bottom: 0.6em
+
+.inline_list
+  list-style: none
+  display: inline-block
+  margin: 0
+  li
+    display: inline-block
+    border-right: 1px solid $app-gray-medium
+    margin-right: 0.7em
+    padding-right: 1em
+    line-height: 1.28
+    &:last-of-type
+      border-right: none
+      margin-right: 0
+      padding-right: 0
+
+.remove_bullets
+  list-style: none
+  margin-left: 0
+
+.navigation_list
+  list-style: none
+  margin: 0
+  li
+    margin-bottom: 0
+  a
+    display: block
+    padding: 0.4em 0 0.6em
+    &:hover
+      background-color: rgba(0,0,0,0.05)
+
+// .social_list img
+//   vertical-align: text-bottom
+//   margin-right: 0.3em

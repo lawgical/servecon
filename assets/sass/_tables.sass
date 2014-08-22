@@ -1,0 +1,79 @@
+
+.table_index, .table_padded, .table_layout
+  display: table
+  width: 100%
+
+.table_row, .table_row_header
+  display: table-row
+
+@media screen and (min-width: #{$app-media-xs})
+  .table_cell
+    display: table-cell
+    vertical-align: top //???
+
+table, .table_index
+  margin-bottom: $app-margin-large
+  width: 100%
+  border-bottom: 1px solid $app-gray-medium
+
+@media screen and (max-device-width: #{$app-media-xs})
+  tbody tr
+    display: block
+    padding: 0.6em $app-padding-medium
+    border-top: 1px solid $app-gray-medium
+
+th, .table_row_header .table_cell
+  padding: 0.4em $app-padding-medium
+  font-weight: $app-font-bold
+  color: $app-brown
+  white-space: nowrap
+  @media screen and (max-device-width: #{$app-media-xs})
+    display: none
+
+td, .table_index .table_row .table_cell
+  border-top: 1px solid $app-gray-medium
+  padding: 0.6em $app-padding-medium
+  @media screen and (max-device-width: #{$app-media-xs})
+    display: block
+    border-top: none
+    padding: 0
+
+.table_index .table_row
+  @media screen and (max-width: #{$app-media-xs})
+    .table_cell
+      display: block
+      padding-top: 0
+      padding-bottom: 0
+      &:first-of-type
+        padding-top: 0.6em
+      &:last-of-type
+        padding-bottom: 0.6em
+        border-top: none
+
+    .text_right
+      text-align: left
+
+.table_padded .table_cell
+  padding: 0.3em 1.231em 0.3em 0
+  &:last-child
+    padding-right: 0
+
+tbody tr:nth-of-type(odd)
+  background-color: rgba(0,0,0,0.08)
+
+.table_index .table_row
+  &:nth-of-type(even)
+    background-color: rgba(0,0,0,0.08)
+
+.cell_collapse
+  width: 1px
+  white-space: nowrap
+
+.cell_padded_large
+  padding: $app-media-xs-padding
+  @media screen and (min-width: #{$app-media-xs})
+    padding: 4em 4%
+    > *:first-child
+      margin-top: 0
+    > *:last-child
+      margin-bottom: 0

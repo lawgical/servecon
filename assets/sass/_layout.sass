@@ -1,0 +1,142 @@
+
+// forces scroll bar in FireFox
+html
+  overflow-y: scroll
+  height: 100%
+
+body
+  background-color: #fff
+  @media screen and (max-width: #{$app-media-xs})
+    overflow: hidden
+
+.container
+  max-width: 75rem
+  padding-left: 2.2rem
+  padding-right: 2.2rem
+  margin: 0 auto
+  @media screen and (max-width: #{$app-media-xs})
+    padding-left: $app-media-xs-padding
+    padding-right: $app-media-xs-padding
+
+.row_padded
+  padding: 3em $app-media-xs-padding
+  @media screen and (min-width: #{$app-media-xs})
+    padding-left: 3em
+    padding-right: 3em
+
+.app_header
+  position: relative
+  @include box-sizing(border-box)
+  padding: $app-media-xs-padding
+  background: $app-purple-xdark
+  z-index: 0
+  @media screen and (min-width: #{$app-media-xs})
+    padding: 2.5em 3em 4em
+
+.app_header_bg
+  display: none
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  background: url("images/header.jpg") no-repeat fixed right top / cover
+  z-index: -1
+
+.app_logo
+  display: block
+  // fill-rule: evenodd
+  // clip-rule: evenodd
+  fill: #FFFFFF
+  width: 100%
+  height: 100%
+  max-width: 20em
+  &.home_page
+    max-width: 40em
+
+.app_nav
+  margin-bottom: $app-margin-large
+  a
+    display: inline-block
+    margin: 0 0.7em
+    padding: 0.6em 1.2em
+    border-color: transparent
+    color: #fff
+    font-weight: $app-font-bold
+    &.nav_btn
+      border: 1px solid rgba(255,255,255,0.4)
+      @include border-radius(5px)
+    &:hover
+      color: $app-pink
+      border-color: currentColor
+
+.media_xs_app_nav
+  display: none
+  @media screen and (max-width: #{$app-media-xs})
+    display: block
+    margin: $app-media-xs-padding #{-$app-media-xs-padding} 0
+    a
+      float: left
+      @include box-sizing(border-box)
+      width: 50%
+      padding: 0.5em $app-media-xs-padding
+      background: rgba(0,0,0,0.2)
+      text-transform: uppercase
+      color: #fff
+      &:first-of-type
+        border-right: 1px solid rgba(255,255,255,0.15)
+
+// .main_feature
+//   position: relative
+//   top: 50%
+//   transform: translateY(-50%)
+
+footer
+  margin-top: $app-margin-large
+  padding: $app-margin-medium 0 $app-margin-large
+  clear: both
+  background: $app-brown
+  //text-align: center
+  //border-top: 1px solid $app-gray-medium
+  color: lighten($app-brown, 43)
+  a
+    border-color: lighten($app-brown, 43)
+  nav
+    a
+      display: inline-block
+      margin: 0 $app-margin-medium
+      text-transform: uppercase
+  a
+    color: lighten($app-brown, 43)
+    text-decoration: none
+    &:hover
+      color: $app-font-color
+  .fa-stack-1x
+    color: $app-brown
+
+.flush_with_footer
+  margin-bottom: -$app-margin-large
+
+.box
+  @include box-sizing(border-box)
+  position: relative
+  margin-bottom: $app-margin-medium
+  padding: 1.5em 1.66667em 1.66667em
+  border: 1px solid $app-gray-medium
+  @include border-radius($app-border-radius-small)
+  > *:first-child
+    margin-top: 0
+  > *:last-child
+    margin-bottom: 0
+
+.box_gray
+  @include box-sizing(border-box)
+  position: relative
+  margin-bottom: $app-margin-medium
+  padding: 1.5em 1.66667em 1.66667em
+  background-color: $app-gray-light
+  @include border-radius($app-border-radius-small)
+  > *:first-child
+    margin-top: 0
+  > *:last-child
+    margin-bottom: 0

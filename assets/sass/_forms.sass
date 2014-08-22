@@ -1,0 +1,60 @@
+
+.field, .input-wrapper
+  margin-bottom: $app-margin-small
+  &.cols
+    max-width: 30em
+
+label
+  display: block
+  margin-bottom: 0.2em
+  text-align: left
+  color: $app-brown
+  &.inline
+    :display inline-block
+
+input[type='text'], input[type='email'], input[type='password'], textarea, select
+  @include box-sizing(border-box)
+  display: block
+  margin: 0
+  border: 1px solid $app-gray-dark
+  outline: none
+  width: 100%
+  max-width: 30em
+  padding: 0.850em
+  @include box-shadow(rgba(0,0,0,0.15) 0 2px 2px 1px inset)
+  @include border-radius(5px)
+  // transition all? see git hist if interested
+
+  &:focus
+    outline: none
+    border-color: $app-pink
+    @include box-shadow($app-pink 0 0 6px 0)
+
+textarea
+  max-width: none
+  height: 10em
+  max-height: 25em
+
+input[type='checkbox'], input[type='radio']
+  cursor: pointer
+  + label
+    display: inline
+    color: $app-font-color
+    cursor: pointer
+
+.field_inline_btn
+  position: relative
+  max-width: 30em
+  input[type="text"], input[type="email"]
+    padding-right: 7em
+    @include border-right-radius(5px)
+  input[type="submit"]
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    margin-bottom: 0
+    height: auto
+    padding-top: 0
+    padding-bottom: 0.3em
+    @include border-left-radius(0)

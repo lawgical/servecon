@@ -1,0 +1,90 @@
+//= require_self
+
+//////////////////////////
+//  site specific variables
+//////////////////////////
+
+$app-gray-light: #e5e5e5 //#e9e9e9
+$app-gray-medium: #d9d9d9
+$app-gray-dark: #cbcbcb
+
+$app-blue: #4d72b2 //lighten(#6795c2, 5%) //64b3ff
+$app-blue-medium: darken($app-blue, 7)
+$app-brown: #828179
+$app-green: #7fb24d
+$app-yellow: #edd863
+$app-red: #b2594d
+
+$app-pink: #df7366
+$app-purple-dark: #1c0920 //#483949
+$app-purple-xdark: #1c0920 //#2b252c
+
+$app-base-em: 1em
+$app-font-small: 84.6%
+$app-font: 'Open Sans', sans-serif
+$app-font-normal: 300
+$app-font-bold: 600
+$app-font-color: #483949
+
+$app-margin-small: 1.3em
+$app-margin-medium: 2.6em
+$app-margin-large: 5em
+
+$app-padding-small: 0.8em
+$app-padding-medium: 1.6em
+$app-padding-large: 2.2em
+
+$app-border-radius-small: 3px
+
+$app-media-xs: 767px
+$app-media-small: 1030px
+$app-media-medium-small: 1100px
+$app-media-medium-large: 1300px
+$app-media-large: 1550px
+
+$app-media-xs-padding: 1.25rem
+
+@mixin flexbox
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+@mixin flex-direction
+  -moz-box-orient: vertical
+  -webkit-box-orient: vertical
+  -ms-box-orient: vertical
+  -webkit-flex-direction: column
+  flex-direction: column
+  // -webkit-box-direction: column
+  // -moz-box-direction: column
+  // -ms-flex-direction: column
+  // -webkit-flex-direction: column
+  // flex-direction: column
+
+@mixin flex-order($val)
+  -webkit-box-ordinal-group: $val+1
+  -moz-box-ordinal-group: $val+1
+  -ms-flex-order: $val
+  -webkit-order: $val
+  order: $val
+
+
+
+//////////////////////////
+//  import styles
+//////////////////////////
+
+@import reset
+@import compass/css3
+@import type
+@import layout
+@import columns
+@import forms
+@import buttons
+@import lists
+@import tables
+
+// keep at bottom
+@import misc
