@@ -1,0 +1,127 @@
+
+html
+  font-size: $app-base-em
+  @media screen and (min-width: #{$app-media-xs})
+    font-size: 0.813em //13px
+  @media screen and (min-width: #{$app-media-small})
+    font-size: 0.938em // 15px
+  @media screen and (min-width: #{$app-media-medium-small})
+    font-size: 1em //16px
+  @media screen and (min-width: #{$app-media-medium-large})
+    font-size: 1.125em //18px
+  @media screen and (min-width: #{$app-media-large})
+    font-size: 1.250em //20px
+
+body
+  font-family: $app-font
+  font-weight: $app-font-normal
+  line-height: 1.57
+  color: $app-font-color
+  cursor: default
+
+a
+  color: $app-font-color
+  text-decoration: none
+  border-bottom: 1px solid currentColor
+  &:hover
+    color: $app-pink
+    border-color: currentColor
+
+p, blockquote
+  margin-bottom: $app-margin-small
+
+// h1, h2, h3, h4, h5
+//   color: $app-purple-dark
+
+h1
+  font-size:  3.998em
+  font-weight: $app-font-normal
+  letter-spacing: -0.035em
+  line-height: 1.1
+  margin-bottom: 0.7em
+  // @media screen and (min-width: #{$app-media-xs})
+  //   font-size: 2.742em //em(30)
+
+h2
+  font-size:  2.827em
+  font-weight: $app-font-normal
+  letter-spacing: -0.035em
+  line-height: 1.1
+  margin: $app-margin-small 0 0.4em
+  // @media screen and (min-width: #{$app-media-xs})
+  //   font-size: 1.828em //em(20)
+
+h3
+  font-size:  1.414em
+  font-weight: 400
+  line-height: 1.1
+  margin: $app-margin-small 0 0.5em
+  // @media screen and (min-width: #{$app-media-xs})
+  //   font-size: 1.219em //em(16)
+
+h4, h5
+  font-size:  1em
+  font-weight: $app-font-bold
+  line-height: 1.1
+  margin: $app-margin-small 0 0.5em
+  // @media screen and (min-width: #{$app-media-xs})
+  //   font-size: 1.16667em //em(14)
+
+small, .font_small
+  font-size: $app-font-small
+
+.font_medium
+  font-size: 1.067em
+
+@media screen and (min-width: #{$app-media-xs})
+  .font_content_medium
+    font-size: 1.067em
+
+.font_large
+  font-size: 135%
+  line-height: 1.3
+
+.font_xl
+  font-size: 200%
+  line-height: 1.3
+
+em, i, .font_italic
+  font-style: italic
+
+strong, b, .font_bold
+  font-weight: $app-font-bold
+
+
+//////////////////////////
+//  Misc
+//////////////////////////
+
+.text_muted
+  color: $app-brown
+
+.text_light
+  color: lighten($app-brown,10%)
+
+.text_white
+  color: #fff
+  a:not(.btn)
+    color: #fff
+    border-color: #fff
+    &:hover
+      color: rgba(255,255,255,0.5)
+      border-color: rgba(255,255,255,0.5)
+
+.text_center
+  text-align: center
+
+.text_right
+  text-align: right
+
+.no_wrap
+  :white-space nowrap
+
+.text_uppercase
+  text-transform: uppercase
+
+sup
+  vertical-align: super
