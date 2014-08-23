@@ -26,7 +26,10 @@
     %header.app_header.text_center
       .app_header_bg
 
-      %nav.app_nav.font_small
+      .btn_menu.text_right
+        %span{data: {'toggle' => '.js_site_nav'}, class: "fa fa-bars"}
+
+      %nav.app_nav.js_site_nav
         %a{:href => "index.html"} Home
 
         %a{:href => "index.html#a-speakers"} Speakers
