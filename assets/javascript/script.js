@@ -30,4 +30,9 @@ $(document).ready(function() {
     }, 1500);
   });
 
+  $('[data-toggle]').click(function(e){
+    e.preventDefault();
+    $($(this).data('toggle')).toggle();
+  });
+
 });
