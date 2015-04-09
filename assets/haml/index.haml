@@ -37,7 +37,7 @@
 
         %a{:href => "index.html#a-sessions", data: {'anchor' => '#a-sessions'}} Sessions
 
-        %a.nav_btn{:href => "index.html#a-register", data: {'anchor' => '#a-register'}} Register
+        -#%a.nav_btn{:href => "index.html#a-register", data: {'anchor' => '#a-register'}} Register
 
         %a{:href => "help.html"} Help
 
@@ -55,8 +55,20 @@
 
         %p.break_large.text_white March 26<span class="font_small">th</span> &amp; 27<span class="font_small">th</span>
 
-        %p
+        -#%p
           %a.btn{:href => "index.html#a-register", data: {'anchor' => '#a-register'}} Register Today
+
+        .align_center{style: 'max-width:50em;'}
+          %p.font_large.text_white Thank you to all the attendees, presenters and sponsors!<br>You made the first ServeCon valuable, fun and a huge success!
+
+          %p.text_white
+            %span.font_xl <strong><em>Recordings will be available by April 15, 2015.</strong></em>
+            %br
+            %span.font_small.text_white <em>We're uploading the videos as fast as possible, but there were a lot!</em>
+
+          %p.text_white If you attended the event, you will receive an email with instructions to access the recordings.
+
+          %p.text_white If you didn't attend, but wish to purchase or rent the videos, we'll have that option available soon.
 
     #a-speakers.bg_gray_light.row_padded{style: 'padding-bottom:0;'}
       .align_center{style: 'max-width:60em;'}
@@ -1201,7 +1213,7 @@
                 %a Lorem Ipsum Dolor
               <br>00am &ndash; 00am
 
-    #a-register.bg_gray_light.row_padded
+    -#a-register.bg_gray_light.row_padded
       .align_center{style: 'max-width:38em;'}
         %h2.remove_margin_top Register for ServeCon
 
